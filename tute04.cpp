@@ -2,7 +2,7 @@
 
 Write a program to calculate the function called nCr which is defined as
 
-nCr = n!/ r!(n−r)!
+nCr = n!/ r!(n-r)!
 Where n! is the factorial of n.
 
 Implement the functions
@@ -28,14 +28,22 @@ int main() {
   return 0;
 }
 
+// function to calculate factorial
 long Factorial(int no){
+// declaring varialbes
 	int fac = 1;
+	
+// calculate factorial
 	for (int c = no; c >= 1; c--){
 		fac = fac * c;
 	}
+	
+// output factorial
 	return fac;
 }
 
+// function to calculate the function called nCr [= n!/ r!(n-r)!] 
 long nCr(int n, int r){
+// call function Factorial(int no)
 	return (Factorial(n) / (Factorial(r) * Factorial(n - r)));
 }
